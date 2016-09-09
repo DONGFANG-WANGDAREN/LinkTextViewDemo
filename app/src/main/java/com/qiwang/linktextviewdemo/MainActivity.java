@@ -16,8 +16,8 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mTv;
     private static final String m百度网址 = "https://www.baidu.com";
+    private TextView mTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,13 +46,14 @@ public class MainActivity extends AppCompatActivity {
                 openLink(m百度网址);
             }
         });
-links.add(link);
+        links.add(link);
 
         return links;
     }
+
     /**
      * 打开网址的方法哦!
-     * */
+     */
     private void openLink(String link) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
         startActivity(browserIntent);
